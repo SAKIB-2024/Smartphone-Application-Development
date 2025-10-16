@@ -1,11 +1,16 @@
 import 'dart:math';
 
 String generatePassword(int length) {
-  const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#\$%^&*()';
-  Random random = Random();
-  return List.generate(length, (index) => chars[random.nextInt(chars.length)]).join();
+  const characters = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789@#\$%&*!';
+  final random = Random();
+  String password = '';
+
+  for(int i = 0; i < length; i++) {
+    password += characters[random.nextInt(characters.length)];
+  }
+  return password;
 }
 
 void main() {
-  print("Random Password: ${generatePassword(10)}");
+  print('Generated Password: ${generatePassword(10)}');
 }
