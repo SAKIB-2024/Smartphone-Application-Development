@@ -5,6 +5,6 @@ void main() {
   String Name = 'ZORO TARO';
   File file = File('hello.txt');
 
-  file.writeAsStringSync('$friendName\n', mode: FileMode.append);
+  file.writeAsStringSync('$Name\n', mode: FileMode.append);
   print('Friend name appended to hello.txt successfully!');
 }
