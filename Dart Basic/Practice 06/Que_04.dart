@@ -3,11 +3,6 @@ class Animal {
       String Name;
       var color;
       Animal(this.id ,this.Name,this.color);
-      // House(this.id, this.Name, this.price);
-
-      // void display() {
-      //     print('ID :- $id , Name :- $Name , Price :- $price');
-      // }
 }
 class Cat extends Animal {
       String sound = 'Meow';
